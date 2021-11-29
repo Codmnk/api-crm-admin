@@ -1,0 +1,15 @@
+//user apis
+### get admin user
+GET http://localhost:8000/api/v1/admin-user
+
+### crate a admin user
+POST http://localhost:8000/api/v1/admin-user
+Content-Type: application/json
+
+{
+  "fName" : "Prem",
+  "lName" : "Acharya",
+  "email": "a@a.com",
+  "password": "123456aaa",
+  "phone" : "0413705873"
+}
