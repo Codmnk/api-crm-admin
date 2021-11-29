@@ -3,7 +3,7 @@ import Joi from "joi";
 const fName = Joi.string().max(30).required();
 const lName = Joi.string().max(30).required();
 const email = Joi.string().email({ minDomainSegments: 2 });
-const phone = Joi.string().max(15).required();
+const phone = Joi.string().max(15).allow("");
 const password = Joi.string().max(50).required();
 
 export const newAdminUserFormValidation = (req, res, next) => {
