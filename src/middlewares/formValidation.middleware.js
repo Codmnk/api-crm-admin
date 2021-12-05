@@ -27,3 +27,21 @@ export const newAdminUserFormValidation = (req, res, next) => {
 		next(error);
 	}
 };
+export const loginAdminUserFormValidation = (req, res, next) => {
+	try {
+		const schema = Joi.object({
+			email: email.required(),
+			password,
+		});
+
+		const { error } = schema.validate(req.body);
+
+		if (error) {
+			error.status = 200;
+			return next(error);
+		}
+		next();
+	} catch (error) {
+		next(error);
+	}
+};

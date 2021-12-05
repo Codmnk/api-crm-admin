@@ -13,3 +13,13 @@ Content-Type: application/json
   "password": "123456aaa",
   "phone" : "0413705873"
 }
+
+### login a admin user
+POST http://localhost:8000/api/v1/login
+Content-Type: application/json
+
+{
+   
+  "email": "a@a.com",
+  "password": "123456aaa"
+}
